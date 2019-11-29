@@ -1,19 +1,17 @@
 !/bin/bash
 # Bash script to rotate VPN connection.
-# Requirement:          apps: nordvpn
+# Requirement:          
+# Apps: nordvpn installed
 #
 #
 ## Variables
                                                                                                                                                                         
 target="google.com"
 count=$( ping -c 1 google.com | grep icmp* | wc -l )
-server=("Germany" "Belgium" "France" "Spain" "UK" "Sweden")
-
-log=/var/log/vpn_rotation.log
-DATE=`date +%Y-%m-%d:%H:%M:%S`
+server=("Germany" "Belgium" "France" "Spain" "UK" "Sweden" "Netherlands" "Denmark" "Norway" "Portugal")
 random=$$$(date +%s)
 
-## Pre-script
+## Script
 if [ $count -eq 0 ]
 then
 echo "Connection interupted, re-initialing connection:"
