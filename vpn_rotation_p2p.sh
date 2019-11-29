@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 # Bash script to rotate VPN connection.
 # Requirement:          
 # Apps: nordvpn installed
