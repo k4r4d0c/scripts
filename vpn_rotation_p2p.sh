@@ -4,6 +4,10 @@
 # Apps: nordvpn installed
 #
 #
+
+## Requirement test
+command -v nordvpn >/dev/null 2>&1 || { echo >&2 "I require Nordvpn but it's not installed.  Aborting."; exit 1; }
+
 ## Variables
                                                                                                                                                                         
 target="google.com"
